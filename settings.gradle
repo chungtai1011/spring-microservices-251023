@@ -1,0 +1,3 @@
+rootProject.name = 'spring-microservices-251023'
+
+include 'licensing-service'
