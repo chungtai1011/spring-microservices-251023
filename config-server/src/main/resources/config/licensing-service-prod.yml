@@ -1,0 +1,9 @@
+example:
+  property: I AM PROD
+
+# DataSource settings: set here your own configurations for the database 
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring-microservice-251023-licensing-prod
+    username: postgres
+    password: postgres

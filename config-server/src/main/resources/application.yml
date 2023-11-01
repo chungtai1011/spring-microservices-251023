@@ -1,0 +1,32 @@
+spring:
+    application:
+        name: config-server   
+    profiles:
+        active:
+            - git
+    cloud:
+        config:
+            server:
+                # native:
+                #    search-locations: classpath:/config
+                git:
+                   uri: https://github.com/chungtai1011/spring-microservices-251023-config.git
+                   searchPaths: licensing-service
+                   default-label: master
+                # vault:
+                #     port: 8200
+                #     host: 127.0.0.1
+                #     kvVersion: 2
+                #     backend: secret
+                #     profileSeparator: /
+encrypt:
+    key: IMSYMMETRIC
+server:
+    port: 8888  
+
+#Enable all Spring Boot Actuator endpoints.
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"

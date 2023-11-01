@@ -1,0 +1,14 @@
+spring:
+    application:
+        name: licensing-service          
+    profiles:
+        active: dev                      
+    config:
+        import: "optional:configserver:http://localhost:8888"
+
+#Enable all Spring Boot Actuator endpoints.
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
